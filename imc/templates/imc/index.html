@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saude Cuidados Pessoais</title>
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'imc/css/estilo.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'index' %}" class="logo">IMC </a>
+    </header>
+    {% block main %}
+    <div class="container">
+        <h2>Entenda o que é o IMC e descubra se seu peso está adequado para uma vida mais saudável</h2>
+        <p>A obesidade e o excesso de peso, especialmente o acúmulo de gordura abdominal, estão associados a um
+            risco
+            elevado de
+            doenças cardíacas. A redução de peso ajuda a diminuir o risco de mortalidade por doenças cardíacas e
+            contribui
+            para a
+            prevenção e controle de diabetes, hipertensão e colesterol alto, favorecendo a saúde cardiovascular. A
+            perda
+            de
+            peso
+            pode ser alcançada por meio de uma alimentação balanceada e maior atividade física.</p>
+
+        <p class="pergunta">Como saber o peso ideal?</p>
+        <p>A obesidade é determinada pelo Índice de Massa Corporal (IMC) que é calculado dividindo-se o peso (em kg)
+            pelo quadrado da altura (em metros). O resultado revela se o peso está dentro da faixa ideal, abaixo ou
+            acima do desejado.
+        </p>
+        <p class="pergunta">
+            O que você precisa saber sobre o resultado do IMC:
+        </p>
+        <p>
+            Abaixo do peso: IMC < 18,5. Risco de deficiências nutricionais e imunidade baixa.<br>
+                Peso normal: IMC 18,5 - 24,9. Menor risco de doenças, saúde equilibrada.<br>
+                Sobrepeso: IMC 25 - 29,9. Risco aumentado de hipertensão e problemas cardíacos.<br>
+                Obesidade: IMC > 30. Elevado risco de diabetes e doenças cardiovasculares.
+        </p>
+
+
+
+        <a href="{% url 'calculo-imc' %}">Clique aqui para calcular seu IMC</a>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

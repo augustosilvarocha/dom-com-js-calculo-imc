@@ -1,0 +1,24 @@
+{% extends "imc/index.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'imc/css/imc.css' %}">
+    <link rel="stylesheet" href="{% static 'imc/css/estilo.css' %}">
+{% endblock %}
+{% block main %}
+    <main> 
+        <div class="altura">
+            <label for="altura">Altura (metros)</label>
+            <input type="number" id="altura">
+        </div>
+        <div class="peso">
+            <label for="peso">Peso(kg)</label>
+            <input type="number" id="peso">
+        </div>
+
+        <div class="calc-imc">
+            <button onclick="calcularIMC()">Calcular</button>
+        </div>
+        <span id="resultado"></span>
+        <script src="{% static 'imc/js/script.js' %}"></script>
+    </main>
+{% endblock %}
